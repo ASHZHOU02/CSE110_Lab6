@@ -119,7 +119,7 @@ class RecipeCard extends HTMLElement {
     // If nothing was passed in, return
     if (!data) return;
 
-    // A6. TODO - Select the <article> we added to the Shadow DOM in the constructor
+    // A6. TODO - Select the <article> we added to the Shadow DOM in the const  ructor
     const select = this.shadowRoot.querySelector('article');
     // A7. TODO - Set the contents of the <article> with the <article> template given in
     //           cardTemplate.html and the data passed in (You should only have one <article>,
@@ -128,15 +128,15 @@ class RecipeCard extends HTMLElement {
     select.innerHTML = `<img src= "${data.imgSrc}"
     alt="${data.imgAlt}">
     <p class="title">
-    <a href='${data.titleLnk}'>${data.titleTxt}</a>
+    <a href="${data.titleLnk}">${data.titleTxt}</a>
     </p>
     <p class="organization">${data.organization}</p>
     <div class="rating">
       <span>${data.rating}</span>
-      <img src="/assets/images/icons/${data.rating}-star.svg" alt="5 stars">
+      <img src="./assets/images/icons/${data.rating}-star.svg" alt="5 stars">
     <span>(${data.numRatings})</span>
     </div>
-    <time>${data.lengthTime} min</time>
+    <time>${data.lengthTime}</time>
     <p class="ingredients">
       ${data.ingredients}
     </p>`;
